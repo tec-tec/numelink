@@ -403,3 +403,41 @@ struct Constants {
         static let didSave = "NotificationOfBiduleDidChange"
     }
 }
+
+enum FormError: Error {
+    case nameTooShort
+    case invalidBirthDate
+    case missingCoins (coinsMissing: Int)
+}
+
+func doSomethingRisky() throws -> String {
+
+    throw FormError.missingCoins(coinsMissing: 5)
+}
+
+func somethingElseRisky() {
+
+    var str: String = "toto"
+
+    do {
+        str = try doSomethingRisky()
+    } catch FormError.missingCoins (let missing) {
+        print("There is not enough coins, missing : \(missing)")
+    } catch {
+        print(error)
+    }
+
+    print(str)
+}
+
+somethingElseRisky()
+
+
+do {
+    try FileManager().attributesOfItem(atPath: "Roto")
+} catch {
+    print(error)
+}
+
+
+

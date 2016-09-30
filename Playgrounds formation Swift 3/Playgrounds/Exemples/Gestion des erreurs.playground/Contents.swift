@@ -3,7 +3,7 @@
 
 ## Créer une erreur
 */
-//: On utilise une énumération qui se conforme au protocole *ErrorType* afin de définir une erreur.
+//: On utilise une énumération qui se conforme au protocole *Error* afin de définir une erreur.
 //: L'énumération est adaptée car elle permet de spécifier différentes erreurs autour d'une même problématique, et même d'associer des valeurs à certains cas (mais dans l'absolu, on pourrait aussi utiliser une structure)
 
 enum FoodDispenserError: Error {
