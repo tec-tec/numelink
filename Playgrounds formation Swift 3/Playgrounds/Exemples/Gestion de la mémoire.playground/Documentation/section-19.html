@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Section 20</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body>
+<div class="content-wrapper">
+  <section class="section">
+    <p>On se retrouve ici avec un cycle de référence forte. Les instances aSon et aFather restent en mémoire car elles se référencent l&#39;une l&#39;autre.
+Pour éviter ce cas, on peut déclarer la propriété father comme étant une référence faible (weak)
+Dans la déclaration de la classe si dessus, on déclarera father de cette façon : weak var father: Human?</p>
+<h3 id="cas-de-l-utilisation-de-unowned">Cas de l&#39;utilisation de unowned</h3>
+<p>unowned, comme weak, indique une référence faible, ne suffisant pas à maintenir une instance &quot;en vie&quot;.
+À la différence de weak, unowned ne met pas la référence à nil lors de la destrcution de l&#39;instance référencé (donc pas d&#39;optionnel à utiliser). Unowned est à utiliser lorsque l&#39;on est certain que la référence existera pendant tout la durée de vie de l&#39;instance.</p>
+
+  </section>
+</div>
+</body>
+</html>

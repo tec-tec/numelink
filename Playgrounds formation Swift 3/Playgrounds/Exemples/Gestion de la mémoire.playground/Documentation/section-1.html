@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Section 2</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body>
+<div class="content-wrapper">
+  <section class="section">
+    <h1 id="gestion-de-la-m-moire-arc">Gestion de la mémoire : ARC</h1>
+<p>En Swift, la gestion de la mémoire est effectuée de manière automatique, mais néanmoins performante.</p>
+<p>Un mécanisme, nommé ARC (pour Automatic Reference Counting) analyse notre cote est s&#39;occupe de gérer un &quot;compteur de référence&quot;.</p>
+<p>Ce compteur de référence indique le nombre de référence qui utilise une instance de classe (les instance de structures sont des types valeur, et ne sont donc pas concernés par ARC)</p>
+<p>Le but de ARC est donc de détruire un objet si, et seulement si, il n&#39;est plus référencé nul part. ARC va donc gérer pour nous le compteur de référence de l&#39;objet : l&#39;augmenter si on référence l&#39;objet depuis une autre variable, le diminuer si on déréférence l&#39;objet. Quand le compteur tombe à 0, l&#39;objet n&#39;est plus référencé par aucune variable, il peut donc être détruit en toute sécurité. L&#39;environnement d&#39;exécution (runtime) va alors détruire l&#39;objet</p>
+<p>Reprenons donc le code vu dans le chapitre Désinitialisation :</p>
+
+  </section>
+</div>
+</body>
+</html>
